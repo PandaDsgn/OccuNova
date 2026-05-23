@@ -1,0 +1,16 @@
+# Node / React
+frontend/node_modules/
+frontend/dist/
+.env
+
+# Python / FastAPI
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# OS Files
+.DS_Store
+**/.DS_Store
+
+# Ignore Heavy AI Models
+backend/models/*.keras
