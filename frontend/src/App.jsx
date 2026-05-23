@@ -123,7 +123,7 @@ function App() {
       const formData = new FormData();
       formData.append("file", originalFile);
       const response = await axios.post(
-        "http://127.0.0.1:8000/autocrop",
+        "https://pandadsgn-occunova-api.hf.space/autocrop",
         formData,
       );
       setAutoCropB64(response.data.auto_crop_b64);
@@ -144,7 +144,7 @@ function App() {
       const formData = new FormData();
       formData.append("file", blob, "retina_crop.jpg");
       const response = await axios.post(
-        "http://127.0.0.1:8000/predict",
+        "https://pandadsgn-occunova-api.hf.space/predict",
         formData,
       );
       setResult(response.data);
