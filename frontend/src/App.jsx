@@ -212,7 +212,7 @@ function App() {
                 lineHeight: "1.6",
               }}
             >
-              Our dual-stage convolutional neural network ensemble delivers
+              The dual-stage convolutional neural network ensemble delivers
               advanced anatomical verification tailored to ophthalmic imaging.
             </p>
           </section>
