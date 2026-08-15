@@ -12,6 +12,30 @@ const STAGES = {
   RESULT: "RESULT",
 };
 
+// --- LANDING PAGE COMPONENT ---
+function LandingPage({ onGoToApp }) {
+  return (
+    <div className="landing-page">
+      <div className="landing-content">
+        <h1 className="landing-title">
+          <span className="landing-title-dark">Occu</span>
+          <span className="landing-title-accent">Nova</span>
+        </h1>
+        <h2 className="landing-subtitle">Detect. Determine. Diagnose.</h2>
+        <p className="landing-description">
+          A dual-stage convolutional neural network ensemble that screens
+          retinal fundus imagery, isolates the optic disc, and routes every
+          scan through Triage and Specialist verification — surfacing signs
+          of Glaucoma with clinical-grade rigor.
+        </p>
+        <button className="landing-cta-btn" onClick={onGoToApp}>
+          Go to Application
+        </button>
+      </div>
+    </div>
+  );
+}
+
 // --- ABOUT PAGE COMPONENT ---
 function AboutPage() {
   return (
@@ -85,7 +109,7 @@ function AboutPage() {
 
 // --- MAIN APP COMPONENT ---
 function App() {
-  const [currentPage, setCurrentPage] = useState("HOME"); // 'HOME' or 'ABOUT'
+  const [currentPage, setCurrentPage] = useState("LANDING"); // 'LANDING', 'HOME', or 'ABOUT'
 
   const [stage, setStage] = useState(STAGES.UPLOAD);
   const [imageSrc, setImageSrc] = useState(null);
@@ -174,7 +198,7 @@ function App() {
       {/* HEADER SECTION */}
       <header className="app-header">
         <div className="header-spacer"></div>
-        <h1 className="header-logo" onClick={() => setCurrentPage("HOME")}>
+        <h1 className="header-logo" onClick={() => setCurrentPage("LANDING")}>
           OCCUNOVA
         </h1>
         <nav className="header-nav">
@@ -192,7 +216,9 @@ function App() {
       </header>
 
       {/* CONDITIONAL PAGE RENDERING */}
-      {currentPage === "ABOUT" ? (
+      {currentPage === "LANDING" ? (
+        <LandingPage onGoToApp={() => setCurrentPage("HOME")} />
+      ) : currentPage === "ABOUT" ? (
         <AboutPage />
       ) : (
         <div className="container">
