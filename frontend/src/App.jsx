@@ -16,19 +16,19 @@ const STAGES = {
 function LandingPage({ onGoToApp }) {
   return (
     <div className="landing-page">
-      <div className="landing-content">
-        <h1 className="landing-title">
-          <span className="landing-title-dark">Occu</span>
-          <span className="landing-title-accent">Nova</span>
+      <div className="landing-hero">
+        <h1 className="landing-brand">
+          <span className="landing-brand-dark">Occu</span>
+          <span className="landing-brand-accent">Nova</span>
         </h1>
-        <h2 className="landing-subtitle">Detect. Determine. Diagnose.</h2>
-        <p className="landing-description">
+        <h2 className="landing-title">Detect. Determine. Diagnose.</h2>
+        <p className="landing-sub">
           A dual-stage convolutional neural network ensemble that screens
           retinal fundus imagery, isolates the optic disc, and routes every
           scan through Triage and Specialist verification — surfacing signs
           of Glaucoma with clinical-grade rigor.
         </p>
-        <button className="landing-cta-btn" onClick={onGoToApp}>
+        <button className="btn btn-primary landing-cta" onClick={onGoToApp}>
           Go to Application
         </button>
       </div>
@@ -196,24 +196,29 @@ function App() {
   return (
     <div className="app-wrapper">
       {/* HEADER SECTION */}
-      <header className="app-header">
-        <div className="header-spacer"></div>
-        <h1 className="header-logo" onClick={() => setCurrentPage("LANDING")}>
-          OCCUNOVA
-        </h1>
-        <nav className="header-nav">
-          <button
-            className={`nav-link ${currentPage === "ABOUT" ? "active" : ""}`}
-            onClick={() =>
-              setCurrentPage(currentPage === "ABOUT" ? "HOME" : "ABOUT")
-            }
+      {currentPage !== "LANDING" && (
+        <header className="app-header">
+          <div className="header-spacer"></div>
+          <h1
+            className="header-logo"
+            onClick={() => setCurrentPage("LANDING")}
           >
-            {currentPage === "ABOUT"
-              ? "Diagnostic Dashboard"
-              : "About the Model"}
-          </button>
-        </nav>
-      </header>
+            OCCUNOVA
+          </h1>
+          <nav className="header-nav">
+            <button
+              className={`nav-link ${currentPage === "ABOUT" ? "active" : ""}`}
+              onClick={() =>
+                setCurrentPage(currentPage === "ABOUT" ? "HOME" : "ABOUT")
+              }
+            >
+              {currentPage === "ABOUT"
+                ? "Diagnostic Dashboard"
+                : "About the Model"}
+            </button>
+          </nav>
+        </header>
+      )}
 
       {/* CONDITIONAL PAGE RENDERING */}
       {currentPage === "LANDING" ? (
@@ -397,20 +402,22 @@ function App() {
       )}
 
       {/* FOOTER DISCLAIMER */}
-      <footer
-        style={{
-          marginTop: "auto",
-          textAlign: "center",
-          padding: "15px 20px",
-          fontSize: "0.85rem",
-          color: "var(--text-muted)",
-          width: "100%",
-          boxSizing: "border-box",
-        }}
-      >
-        OCCUNOVA is an experimental AI and can make mistakes. Always verify
-        results with a qualified ophthalmologist.
-      </footer>
+      {currentPage !== "LANDING" && (
+        <footer
+          style={{
+            marginTop: "auto",
+            textAlign: "center",
+            padding: "15px 20px",
+            fontSize: "0.85rem",
+            color: "var(--text-muted)",
+            width: "100%",
+            boxSizing: "border-box",
+          }}
+        >
+          OCCUNOVA is an experimental AI and can make mistakes. Always verify
+          results with a qualified ophthalmologist.
+        </footer>
+      )}
     </div>
   );
 }
