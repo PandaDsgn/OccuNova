@@ -1,19 +1,14 @@
-<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .brand { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: 64px; letter-spacing: -1.9px; }
       .title { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.6px; }
-      .sub { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size: 16px; }
     </style>
   </defs>
 
-  <rect width="1200" height="280" fill="#f4f9f9"/>
-
-  <text x="600" y="118" text-anchor="middle" class="brand">
-    <tspan fill="#0f172a">Occu</tspan><tspan fill="#0fa49a">Nova</tspan>
+  <text x="600" y="88" text-anchor="middle" class="brand">
+    <tspan fill="#ffffff">Occu</tspan><tspan fill="#0fa49a">Nova</tspan>
   </text>
 
-  <text x="600" y="165" text-anchor="middle" class="title" fill="#0f172a">Detect. Determine. Diagnose.</text>
-
-  <text x="600" y="205" text-anchor="middle" class="sub" fill="#64748b">Dual-stage CNN ensemble screening for Glaucoma from retinal fundus imagery</text>
+  <text x="600" y="135" text-anchor="middle" class="title" fill="#ffffff">Detect. Determine. Diagnose.</text>
 </svg>
