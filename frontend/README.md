@@ -1,3 +1,5 @@
+<img src=".github/readme-banner.svg" alt="OccuNova — Detect. Determine. Diagnose." width="100%" />
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
