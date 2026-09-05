@@ -1,4 +1,4 @@
-<img src=".github/readme-banner.svg" alt="OccuNova — Detect. Determine. Diagnose." width="100%" />
+<img src=".github/readme-banner.svg?v=9ee9990" alt="OccuNova — Detect. Determine. Diagnose." width="100%" />
 
 # React + Vite
 
