@@ -1,3 +1,5 @@
+<img src=".github/readme-banner.svg" alt="OccuNova — Detect. Determine. Diagnose." width="100%" />
+
 ## System Design & Core Functionality
 
 At its core, the project functions as a high-sensitivity, multi-staged automated triage pipeline for medical imaging. Instead of relying on a single neural network to make a definitive diagnosis, it divides the clinical task into three distinct phases:
